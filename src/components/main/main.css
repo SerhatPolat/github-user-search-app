@@ -1,0 +1,179 @@
+:root {
+  --blue1: #150734;
+  --blue2: #0f2557;
+  --blue3: #28559a;
+  --blue4: #3778c2;
+}
+
+button {
+  cursor: pointer;
+}
+
+.searchForm {
+  background-color: var(--blue2);
+  display: block;
+  margin: auto;
+  margin-top: 100px;
+  padding-block: 30px;
+  padding-inline: 15px;
+  width: max(40%, 270px);
+  border-radius: 20px;
+}
+
+.searchForm .usernameInput {
+  background-color: var(--blue1);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+  width: 150px;
+}
+
+.searchForm .searchBtn {
+  background-color: var(--blue3);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  transition: 0.3s;
+}
+
+.searchForm .searchBtn:hover {
+  background-color: var(--blue1);
+}
+
+.searchForm .formH1 {
+  width: 22ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: normal;
+  margin: auto;
+  margin-bottom: 40px;
+  color: white;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.invalidUsernameMessage {
+  color: var(--blue4);
+  font-size: 25px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.searchAgainBtn {
+  background-color: var(--blue1);
+  color: white;
+  padding-block: 10px;
+  padding-inline: 25px;
+  border-radius: 20px;
+  border: 2px solid var(--blue3);
+  transition: 0.5s;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.searchAgainBtn:hover {
+  box-shadow: inset 150px 0 0 0 var(--blue3);
+}
+
+.seeAllRepos button {
+  background-color: var(--blue1);
+  color: white;
+  padding-block: 10px;
+  padding-inline: 25px;
+  border-radius: 20px;
+  border: 2px solid var(--blue3);
+  transition: 0.5s;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.seeAllRepos button:hover {
+  box-shadow: inset 250px 0 0 0 var(--blue3);
+}
+
+.userProfileSection {
+  background-color: var(--blue2);
+  width: max(50%, 280px);
+  padding: 20px;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userProfileSection .leftSide {
+  width: 40%;
+}
+
+.userProfileSection .rightSide {
+  width: 50%;
+}
+
+.userProfileSection .leftSide img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.userProfileSection .leftSide p {
+  color: white;
+  font-size: 2vmax;
+}
+
+.userProfileSection .rightSide div {
+  display: flex;
+}
+
+.userProfileSection .rightSide p {
+  color: white;
+  font-size: 1.6vmax;
+}
+
+.userProfileSection .rightSide .locationDiv .label {
+  margin-right: 7px;
+  margin-bottom: 40px;
+}
+
+.userProfileSection .rightSide .followingDiv .label,
+.userProfileSection .rightSide .followersDiv .label,
+.userProfileSection .rightSide .repoQtyDiv .label {
+  margin-left: 7px;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 30px solid rgba(255, 255, 255, 0.1);
+  border-top-color: rgb(22, 47, 76);
+  animation: spin 0.7s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -80px;
+  margin-top: -120px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
