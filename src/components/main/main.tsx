@@ -90,7 +90,7 @@ export default function Main() {
           <section className="rightSide">
             <div className="locationDiv">
               <p className="label">Location:</p>
-              <p className="userLocation">{location}</p>
+              <p className="userLocation">{location ? location : 'Universe'}</p>
             </div>
             <div className="followingDiv">
               <p className="userFollowing">{following}</p>
